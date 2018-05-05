@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <h1><a href="/">Список торгов</a></h1>
+</div>
+<meta http-equiv="Refresh" content="30" />
+{% for auc in aucs %}
+    <div>
+        <p>{{ auc.lot_id }}
+          {{ auc.cost_start }}
+        {{ auc.cost_current }}
+        {{ auc.win }}
+      </p>
+    </div>
+{% endfor %}
+<div class="auc">
+    <h2><a href="/">Выиграно</a></h1>
+</div>
+      <div>
+              <p> {{ stats_win }} из {{ stats }}</p>
+      </div>
+</div>
+
+
+</body>
+</html>
