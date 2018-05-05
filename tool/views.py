@@ -9,6 +9,10 @@ def auction_list(request):
     stats = Auction.objects.filter(published_date__lte=timezone.now()).count()
     stats_win = Auction.objects.filter(win=Status.WINNER).count()
 
+    #TODO смотреть сюда и тут писать обработку
+
+    print('sdjkghbdjhf')
+
     return render(request, 'auction_list.html', {
         'aucs': aucs,
         'stats': stats,
